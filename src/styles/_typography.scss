@@ -1,0 +1,6 @@
+@use "./variables" as *;
+
+@font-face {
+    font-family: $base-font, Helvetica, Arial, sans-serif;
+    src: url("../assets/fonts/Comfortaa-Regular.ttf"), format("truetype");
+}
