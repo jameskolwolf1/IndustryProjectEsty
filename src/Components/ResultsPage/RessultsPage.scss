@@ -1,26 +1,50 @@
-.test{
-    place-items: center;
-    display: grid;
-    justify-content: center;
-    margin-left: 20px;
-    margin-right: 20px;
+.test {
+  place-items: center;
+  display: grid;
+  justify-content: center;
+  margin-left: 20px;
+  margin-right: 20px;
 }
-.section{
-    
-    position: relative;
+.header_container {
+  background-color: white;
+  box-shadow: 7px, 4px, 4px, 4px black;
 }
-.section::before {
-
-    position: absolute;
-    background-image: url(../../../public/BackgroundPhone.svg);
-    background-color: rgba(228, 246, 255, 0.6);
-    background-size: 100% 100%;
-    content: "";
+.section {
+  position: relative;
+  
+  
+}
+.section {
   position: absolute;
+  background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  content: "";
+  position: absolute;
+
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-image: url('image.jpg');
-  opacity: 0.5;
+  height: 46%;
+
+  padding-bottom: 18.75rem;
+}
+.exits {
+  background-image: url("../../../public/close_ring.svg");
+  background-repeat: no-repeat;
+  padding-top: 20px;
+  padding-bottom: 1.25rem;
+  margin-left: 2.5rem;
+  z-index: 1;
+}
+.bottom {
+  display: flex;
+  padding-top: 1.875rem;
+  justify-content: center;
+  align-items: center;
+  
+}
+.bottom_One {
+  margin-right: 0.625rem;
 }

@@ -1,17 +1,11 @@
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import "./Cards.scss";
-function Cards({ name, id, url1, url2, url3, url4, setCard}) {
+import Heart from '/Vector.svg'
+function Cards({ name, id, url1, url2, url3, url4, setCard, color}) {
     const x_position = useMotionValue(0);
-    const opacity = useTransform(x_position, [-5, 0, 5], [0, 1, 0]);
+    const opacity = useTransform(x_position, [-20, 0, 20], [0, 1, 0]);
     const rotate = useTransform(x_position, [-1, 1], [-18, 18]);
 
-    const handler = () => {
-
-        if(Math.abs(x_position.get())){
-
-            setCard((pv) => pv.filter((v) => v.id !== id));
-        }
-    }
 
   return (
     <motion.div
@@ -23,31 +17,37 @@ function Cards({ name, id, url1, url2, url3, url4, setCard}) {
         opacity,
         rotate
       }}
-      animate={{ rotate: 360 }}
-      transition={{ease: "linear", duration: .5, type: "spring", stiffness: 200, damping: 10, x: { duration: 1 }
-    }}
+      
       drag="x"
       dragConstraints={{
 
       }}
-      onDragEnd={handler}
+  
     >
-      <div className="container">
+      <div 
+      style={{
+        backgroundColor:color
+      }}
+      className="container">
       <div className="container_button">
             <button className="button">ETSY'S PICK</button>
           </div>
         <div className="container_holder">
           
           <div className="container1">
+          <img className= "heart1" src={Heart}/>
             <img className="container_img" src={url1} />
           </div>
           <div className="container2">
+            <img className= "heart2" src={Heart}/>
             <img className="container_img" src={url2} />
           </div>
           <div className="container3">
+            <img className= "heart3" src={Heart}/>
             <img className="container_img" src={url3} />
           </div>
           <div className="container4">
+          <img className= "heart4" src={Heart}/>
             <img className="container_img" src={url4} />
           </div>
         </div>
