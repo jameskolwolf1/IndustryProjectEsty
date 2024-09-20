@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+.header_container{
+
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+=======
 .root {
   font-family: Inter, Poppins;
+>>>>>>> develop
 }
