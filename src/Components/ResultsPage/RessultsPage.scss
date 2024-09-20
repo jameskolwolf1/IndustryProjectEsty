@@ -10,11 +10,6 @@
   box-shadow: 7px, 4px, 4px, 4px black;
 }
 .section {
-  position: relative;
-  
-  
-}
-.section {
   position: absolute;
   background-color: white;
   background-size: cover;
@@ -26,9 +21,6 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 46%;
-
-  padding-bottom: 18.75rem;
 }
 .exits {
   background-image: url("../../../public/close_ring.svg");

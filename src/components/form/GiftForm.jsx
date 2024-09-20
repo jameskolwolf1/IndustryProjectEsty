@@ -1,6 +1,8 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useAnimate } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import "./GiftForm.scss";
+import Header from "../Header/Header.jsx";
 import craftingIcon from "../../assets/icons/crafts_icon.png";
 import outdoorsIcon from "../../assets/icons/outdoors_icon.png";
 import petsIcon from "../../assets/icons/pets_icon.png";
@@ -22,6 +24,11 @@ const GiftForm = () => {
   const [activeOccasion, setActiveOccasion] = useState({});
   const [activeHobbies, setActiveHobbies] = useState([]);
   const [activeTime, setActiveTime] = useState({});
+
+  const navigate = useNavigate();
+  const handleCardsNav = () => {
+    navigate('/surprises');
+  }
 
   const toggleActive = (id, group) => {
     if (group === "recipient") {
@@ -70,7 +77,6 @@ const GiftForm = () => {
           id={id}
           name={id}
           checked={isActive}
-          // onChange={() => {}}
         />
       </div>
     );
@@ -252,10 +258,18 @@ const GiftForm = () => {
         </div>
         <div className="gift__submit-container">
           <motion.button
+          onClick={handleCardsNav}
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{
-              ease: "linear",
-              duration: 2,
-              x: { duration: 1 },
+              duration: 0.3,
+              ease: [0, 0.71, 0.2, 1.01],
+              scale: {
+                type: "spring",
+                damping: 5,
+                stiffness: 100,
+                restDelta: 0.001
+              }
             }}
             className="gift__submit-surprise"
           >
@@ -265,6 +279,7 @@ const GiftForm = () => {
           <button className="gift__submit-filter">Apply Filter</button>
         </div>
       </form>
+      <Header />
     </main>
   );
 };
