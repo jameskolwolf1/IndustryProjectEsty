@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import Header from './Components/Header/Header';
 import HomePage from './HomePage/HomePage';
+import ResultsPage from './Components/ResultsPage/ResultsPage';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
@@ -12,7 +13,7 @@ function App() {
     <BrowserRouter>
     <Header />
     <Routes>
-      <Route path='/' element={<HomePage/>} exact/>
+      <Route path='/' element={<ResultsPage/>} exact/>
     </Routes>
     </BrowserRouter>
   )
