@@ -1,0 +1,83 @@
+.motion{
+
+    display: block;
+}
+.container {
+
+
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #C1E9FF;
+    padding-top: 2.2rem;
+    padding-bottom: 1.875rem;
+    border-radius: 20px;
+}
+.container_button{
+
+    display: flex;
+    width: 100%;
+    
+    margin-left: 1.875rem;
+    margin-bottom: 20px;
+}
+.button{
+
+    width: 130px;
+    height: 35px;
+    border-radius: 1.25rem;
+    font-weight: bolder;
+    border: 1px solid black;
+    background-color: #FCC7A2;
+}
+
+.container_holder {
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    background-color:#C1E9FF;
+    justify-content: center;
+    gap: 1em;
+}
+
+.container1 {
+
+    width: 150px;
+    height: 180px;
+    
+
+}
+
+.container2 {
+
+    width: 150px;
+    height: 180px;
+
+}
+
+.container3 {
+
+    width: 150px;
+    height: 180px;
+
+}
+
+.container4 {
+
+    width: 150px;
+    height: 180px;
+
+}
+
+.container_img {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
