@@ -28,8 +28,7 @@ function Cards({ name, id, url1, url2, url3, url4, setCard}) {
     }}
       drag="x"
       dragConstraints={{
-        left: 0,
-        right: 0,
+
       }}
       onDragEnd={handler}
     >

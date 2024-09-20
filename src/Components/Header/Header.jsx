@@ -6,9 +6,11 @@ function Header(){
         <header>
             <div>
                 <img />
+                <h4>Home</h4>
             </div>
             <div>
                 <img />
+                <h4>Deals</h4>
             </div>
             <div>
                 <img />

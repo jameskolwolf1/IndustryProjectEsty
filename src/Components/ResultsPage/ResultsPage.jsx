@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import TinderCard from "react-tinder-card";
 import Cards from "../Cards";
 import "./RessultsPage.scss";
 import { motion } from "framer-motion";
@@ -42,7 +41,7 @@ function ResultsPage() {
   const [card, setCard] = useState(cardList);
 
   return (
-    <section>
+    <section className="section">
         <div>
             <button></button>
             <button></button>
